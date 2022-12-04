@@ -19,7 +19,7 @@ greenack1 = 0
 dt2 = 0
 dt1 = 0
 # Initialize the videocapture object
-cap = cv2.VideoCapture('Indian_2.mp4')
+cap = cv2.VideoCapture('ind.mp4')
 input_size = 320
 
 # Detection confidence threshold
