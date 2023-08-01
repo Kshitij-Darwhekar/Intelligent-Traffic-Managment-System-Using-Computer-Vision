@@ -2,7 +2,7 @@
 
 Published Paper : https://ieeexplore.ieee.org/abstract/document/10009105 
 
-Team : @SankalpGhodke
+Team : Rushikesh Bawkar , Sankalp Ghodke , Amey Patil
 
 ## Table of Contents
 1. [Introduction](#introduction)
