@@ -36,11 +36,11 @@ The Intelligent Traffic Management System is a computer vision-based application
 2. Clone this repository to your local machine.
 3. Install the required dependencies using `pip` or `conda`:
    ```bash
-   pip install opencv-python numpy pandas matplotlib
+   pip install requirments.txt
    ```
    or
    ```bash
-   conda install opencv  numpy pandas matplotlib
+   conda install requirments.txt
    ```
 4. Download the pre-trained model weights (if required) and place them in the appropriate directories.
 
