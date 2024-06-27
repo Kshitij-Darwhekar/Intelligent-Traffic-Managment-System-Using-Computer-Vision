@@ -47,7 +47,7 @@ The Intelligent Traffic Management System is a computer vision-based application
 1. Open a terminal or command prompt and navigate to the project directory.
 2. Run the traffic management system application:
    ```bash
-   python traffic_management_system.py
+   python main.py
    ```
 3. The application will start processing the video feed and display the results, including vehicle detection, traffic flow analysis, and other insights.
 
