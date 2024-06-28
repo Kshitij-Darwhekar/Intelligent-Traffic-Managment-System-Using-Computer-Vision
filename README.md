@@ -35,7 +35,7 @@ The Intelligent Traffic Management System is a computer vision-based application
 1. Clone this repository to your local machine.
 2. Install the required dependencies using `pip` or `conda`:
    ```bash
-   pip install requirments.txt
+   pip install -r requirments.txt
    ```
    or
    ```bash
