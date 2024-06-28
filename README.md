@@ -32,9 +32,8 @@ The Intelligent Traffic Management System is a computer vision-based application
 - Matplotlib (for visualization)
 
 ## Installation
-1. Make sure you have downloaded YOLO v3 .cfg and .weights files from [YOLO Official Website](https://pjreddie.com/darknet/yolo/)
-2. Clone this repository to your local machine.
-3. Install the required dependencies using `pip` or `conda`:
+1. Clone this repository to your local machine.
+2. Install the required dependencies using `pip` or `conda`:
    ```bash
    pip install requirments.txt
    ```
@@ -42,7 +41,7 @@ The Intelligent Traffic Management System is a computer vision-based application
    ```bash
    conda install requirments.txt
    ```
-4. Download the pre-trained model weights (if required) and place them in the appropriate directories.
+3. Download the pre-trained model weights (if required) and place them in the appropriate directories.
 
 ## Usage
 1. Open a terminal or command prompt and navigate to the project directory.
