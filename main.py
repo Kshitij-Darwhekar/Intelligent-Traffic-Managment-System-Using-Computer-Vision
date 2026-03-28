@@ -1,6 +1,5 @@
 # Import necessary packages
 import time
-
 import cv2
 import csv
 import numpy as np
@@ -36,7 +35,7 @@ up_line_position = middle_line_position - 10
 down_line_position = middle_line_position + 10
 
 # Store Coco Names in a list
-classesFile = "coco.names"
+classesFile = "YOLO Algorithm files/coco.names"
 classNames = open(classesFile).read().strip().split('\n')
 
 # class index for our required detection classes
@@ -45,16 +44,16 @@ required_class_index = [2, 3, 5, 7]
 detected_classNames = []
 
 # Model Files
-modelConfiguration = 'yolov3-320.cfg'
-modelWeigheights = 'yolov3-320.weights'
+modelConfiguration = 'YOLO Algorithm files/yolov3-320.cfg'
+modelWeigheights = 'YOLO Algorithm files/yolov3.weights'
 
 # configure the network model
 net = cv2.dnn.readNetFromDarknet(modelConfiguration, modelWeigheights)
 
 # Configure the network backenda
 
-net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
-net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
+net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
+net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
 
 # Define random colour for each class
 np.random.seed(42)
@@ -253,8 +252,15 @@ def postProcess(outputs, img):
 
 def realTime():
     while True:
+        
+        #success, img = cap.read()
         success, img = cap.read()
-        img = cv2.resize(img, (0, 0), None, 0.5, 0.5)
+        if not success or img is None:
+            break
+
+        # Increase size for chnage in ouput window size
+        #img = cv2.resize(img, (0, 0), None, 0.5, 0.5)
+        img = cv2.resize(img, (1280, 720))
         ih, iw, channels = img.shape
         blob = cv2.dnn.blobFromImage(img, 1 / 255, (input_size, input_size), [0, 0, 0], 1, crop=False)
 
@@ -316,6 +322,8 @@ def realTime():
         cv2.imshow('Output', img)
 
         if cv2.waitKey(1) == ord('q'):
+            break
+        if cv2.getWindowProperty('Output', cv2.WND_PROP_VISIBLE) < 1:
             break
 
     # Write the vehicle counting information in a file and save it
