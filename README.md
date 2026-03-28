@@ -20,7 +20,6 @@ The Intelligent Traffic Management System is a computer vision-based application
 - Traffic flow analysis: Analyze the traffic flow and congestion patterns at different times of the day.
 - Vehicle counting: Count the number of vehicles passing through specific road segments.
 - Speed detection: Measure the speed of vehicles to identify potential speed violators.
-- Incident detection: Detect and alert on unusual events such as accidents or road blockages.
 
 
 ## Requirements
@@ -28,8 +27,6 @@ The Intelligent Traffic Management System is a computer vision-based application
 - OpenCV
 - YOLO Algorithm
 - Numpy
-- Pandas
-- Matplotlib (for visualization)
 
 ## Installation
 1. Clone this repository to your local machine.
